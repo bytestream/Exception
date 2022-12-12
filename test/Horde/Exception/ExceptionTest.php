@@ -38,7 +38,7 @@ class Horde_Exception_ExceptionTest extends \PHPUnit\Framework\TestCase
 
     public function testMethodGetpreviousYieldsPreviousException()
     {
-        $e = new Horde_Exception(null, null, new Exception('previous'));
+        $e = new Horde_Exception('', 0, new Exception('previous'));
         $this->assertEquals('previous', $e->getPrevious()->getMessage());
     }
 
@@ -50,7 +50,7 @@ class Horde_Exception_ExceptionTest extends \PHPUnit\Framework\TestCase
 
     public function testMethodTostringContainsDescriptionOfPreviousException()
     {
-        $e = new Horde_Exception(null, null, new Exception('previous'));
+        $e = new Horde_Exception('', 0, new Exception('previous'));
         $this->assertMatchesRegularExpression('/Next( exception)? \'?Horde_Exception\'?/', (string)$e);
     }
 

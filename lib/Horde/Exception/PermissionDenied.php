@@ -31,7 +31,7 @@ class Horde_Exception_PermissionDenied extends Horde_Exception
      *                                 object, or an Exception object.
      * @param integer $code            A numeric error code.
      */
-    public function __construct($message = null, $code = null)
+    public function __construct($message = null, $code = 0)
     {
         if (is_null($message)) {
             $message = Horde_Exception_Translation::t("Permission Denied");
