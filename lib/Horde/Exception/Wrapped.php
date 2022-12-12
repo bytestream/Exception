@@ -30,7 +30,7 @@ class Horde_Exception_Wrapped extends Horde_Exception
      *                       object, or an Exception object.
      * @param int   $code    A numeric error code.
      */
-    public function __construct($message = null, $code = 0)
+    public function __construct($message = '', $code = 0)
     {
         $previous = null;
         if (is_object($message) &&

@@ -36,7 +36,7 @@ class Horde_Exception_LastError extends Horde_Exception
      * @param mixed $code_or_lasterror   Either a numeric error code, or
      *                                   an array from error_get_last().
      */
-    public function __construct($message = null, $code_or_lasterror = null)
+    public function __construct($message = '', $code_or_lasterror = 0)
     {
         if (is_array($code_or_lasterror)) {
             if ($message) {
